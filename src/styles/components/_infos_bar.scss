@@ -1,0 +1,55 @@
+@use '../variables';
+
+.container__infos-bar {
+    padding: 34px;
+
+    @media (max-width: 1024px) {
+        display: inline;
+
+        .infos-bar__infos {
+            display: inline-block;
+        }
+    }
+
+    @media (max-width: 640px) {
+        display: block;
+        text-align: center;
+    }
+}
+
+.infos-bar {
+    background-color: variables.$whiteColorWithOpacity;
+    padding: 20px;
+    border-radius: 8px;
+    opacity: .65;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    &__infos {
+        display: block;
+        
+        .center {
+            margin: 14px 0;
+        }
+
+        &__item {
+            font-family: "Roboto", sans-serif;
+            font-size: 16px;
+            color: variables.$whiteColor;
+
+            b {
+                font-family: "Roboto", sans-serif;
+                font-size: 18px;
+                font-weight: bold;
+                display: block;
+                color: variables.$whiteColor;
+                margin-bottom: 2px;
+            }
+        }
+    }
+
+    @media (max-width: 640px) {
+        display: block;
+    }
+}

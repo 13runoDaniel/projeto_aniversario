@@ -1,0 +1,113 @@
+@use './variables';
+
+@font-face {
+    font-family: 'Beauty Reflections';
+    src: url(../assets/source/beauty_reflections.ttf) format(truetype);
+}
+
+.hero {
+    padding: 64px 0 100px;
+    background-image: url(../../images/aniversario.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+
+    @media (max-width: 640px) {
+        background-image: url(../../images/aniversario_mobile.jpg);
+    }
+
+    .container {
+        position: relative;
+    }
+
+    &::before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: variables.$blackColor;
+        opacity: .7;
+        content: '';
+    }
+
+    &__text {
+        margin: 64px 0;
+        font-family: 'Beauty Reflections';
+        font-size: 50px;
+        font-weight: 900;
+        color: variables.$yellowColor;
+        line-height: 56px;
+        text-align: center;
+
+        @media (max-width: 640px) {
+            font-size: 40px;
+        }
+
+        span {
+            margin-top: 34px;
+            font-size: 38px;
+        }
+
+        #counter {
+            color: variables.$silverColor;
+
+            @media (max-width: 640px) {
+                font-size: 30px;
+            }
+        }
+
+        .src__kitty__cats--orange-color {
+            color: variables.$orangeColor;
+        }
+
+        .src__kitty__cats--pink-color {
+            color: variables.$pinkColor;
+        }
+    }
+
+    &__logo,
+    &__bolo {
+        height: 120px;
+        margin-left: auto;
+    }
+
+    .src__kitty__cats {
+        @font-face {
+            font-family: 'Kitty Cats';
+            src: url('../assets/source/kitty_cats.ttf') format(truetype);
+        }
+
+        font-family: 'Kitty Cats';
+
+        &--red-color {
+            color: variables.$redColor;
+        }
+
+        &--purple-color {
+            color: variables.$purpleColor;
+        }
+
+        &--blue-color {
+            color: variables.$blueColor;
+        }
+
+        &--green-color {
+            color: variables.$greenColor;
+        }
+    }
+
+    @media (max-width: 1024px) {
+        
+        &__logo {
+            display: none;
+        }
+    }
+
+    @media (max-width: 640px) {
+
+        &__logo {
+            display: none;
+        }
+    }
+}
